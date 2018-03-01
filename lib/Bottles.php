@@ -16,10 +16,37 @@ class Bottles
 
     public function verse($number)
     {
-        return
-            ($number == 0 ? "No more" : $number)." bottle".($number != 1 ? 's' : '')." of beer on the wall, ".
-            ($number == 0 ? "no more" : $number)." bottle".($number != 1 ? 's' : '')." of beer.\n".
-            ($number > 0 ? "Take ".($number > 1 ? 'one' : 'it')." down and pass it around, " : "Go to the store and buy some more, ").
-            ($number - 1 < 0 ? 99 : ($number - 1 == 0 ? 'no more' : $number - 1))." bottle".($number - 1 != 1 ? 's' : '')." of beer on the wall.\n";
+        switch ($number) {
+            case 0:
+                return
+                    "No more bottles of beer on the wall, ".
+                    "no more bottles of beer.\n".
+                    "Go to the store and buy some more, ".
+                    "99 bottles of beer on the wall.\n";
+                break;
+
+            case 1:
+                return
+                    "1 bottle of beer on the wall, ".
+                    "1 bottle of beer.\n".
+                    "Take it down and pass it around, ".
+                    "no more bottles of beer on the wall.\n";
+                break;
+
+            case 2:
+                return
+                    "2 bottles of beer on the wall, ".
+                    "2 bottles of beer.\n".
+                    "Take one down and pass it around, ".
+                    "1 bottle of beer on the wall.\n";
+                break;
+
+            default:
+                return
+                    "$number bottles of beer on the wall, ".
+                    "$number bottles of beer.\n".
+                    "Take one down and pass it around, ".
+                    ($number - 1)." bottles of beer on the wall.\n";
+        }
     }
 }
