@@ -7,19 +7,19 @@ class Bottles
         return $this->verses(99, 0);
     }
 
-    public function verses($start, $ending)
+    public function verses($hi, $lo)
     {
         return implode("\n", array_map(function ($index) {
             return $this->verse($index);
-        }, range($start, $ending)));
+        }, range($hi, $lo)));
     }
 
-    public function verse($number)
+    public function verse($n)
     {
         return
-            ($number == 0 ? "No more" : $number)." bottle".($number != 1 ? 's' : '')." of beer on the wall, ".
-            ($number == 0 ? "no more" : $number)." bottle".($number != 1 ? 's' : '')." of beer.\n".
-            ($number > 0 ? "Take ".($number > 1 ? 'one' : 'it')." down and pass it around, " : "Go to the store and buy some more, ").
-            ($number - 1 < 0 ? 99 : ($number - 1 == 0 ? 'no more' : $number - 1))." bottle".($number - 1 != 1 ? 's' : '')." of beer on the wall.\n";
+            ($n == 0 ? "No more" : $n)." bottle".($n != 1 ? 's' : '')." of beer on the wall, ".
+            ($n == 0 ? "no more" : $n)." bottle".($n != 1 ? 's' : '')." of beer.\n".
+            ($n > 0 ? "Take ".($n > 1 ? 'one' : 'it')." down and pass it around, " : "Go to the store and buy some more, ").
+            ($n - 1 < 0 ? 99 : ($n - 1 == 0 ? 'no more' : $n - 1))." bottle".($n - 1 != 1 ? 's' : '')." of beer on the wall.\n";
     }
 }
