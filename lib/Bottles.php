@@ -9,8 +9,8 @@ class Bottles
 
     public function verses($hi, $lo)
     {
-        return implode("\n", array_map(function ($index) {
-            return $this->verse($index);
+        return implode("\n", array_map(function ($n) {
+            return $this->verse($n);
         }, range($hi, $lo)));
     }
 
