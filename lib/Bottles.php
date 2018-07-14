@@ -5,25 +5,25 @@ class Bottles
     public function lambdas()
     {
         return [
-            'noMore' => function ($verse) {
+            'NoMore' => function ($verse) {
                 return "No more bottles of beer on the wall, " .
                     "no more bottles of beer.\n" .
                     "Go to the store and buy some more, " .
                     "99 bottles of beer on the wall.\n";
             },
-            'lastOne' => function ($verse) {
+            'LastOne' => function ($verse) {
                 return "1 bottle of beer on the wall, " .
                     "1 bottle of beer.\n" .
                     "Take it down and pass it around, " .
                     "no more bottles of beer on the wall.\n";
             },
-            'penultimate' => function ($verse) {
+            'Penultimate' => function ($verse) {
                 return "2 bottles of beer on the wall, " .
                     "2 bottles of beer.\n" .
                     "Take one down and pass it around, " .
                     "1 bottle of beer on the wall.\n";
             },
-            'default' => function ($verse) {
+            'Default' => function ($verse) {
                 return "{$verse->number()} bottles of beer on the wall, " .
                     "{$verse->number()} bottles of beer.\n" .
                     "Take one down and pass it around, " .
@@ -57,10 +57,10 @@ class Bottles
     private function verseFor($number)
     {
         switch ($number) {
-            case 0:  return new Verse($number, $this->lambdas()['noMore']);
-            case 1:  return new Verse($number, $this->lambdas()['lastOne']);
-            case 2:  return new Verse($number, $this->lambdas()['penultimate']);
-            default: return new Verse($number, $this->lambdas()['default']);
+            case 0:  return new Verse($number, $this->lambdas()['NoMore']);
+            case 1:  return new Verse($number, $this->lambdas()['LastOne']);
+            case 2:  return new Verse($number, $this->lambdas()['Penultimate']);
+            default: return new Verse($number, $this->lambdas()['Default']);
         }
     }
 }
