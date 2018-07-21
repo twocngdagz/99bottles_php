@@ -2,4 +2,7 @@
 
 class Bottles
 {
+    public function verse()
+    {
+    }
 }
