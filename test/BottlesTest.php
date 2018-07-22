@@ -13,4 +13,14 @@ class BottlesTest extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals($expected, (new Bottles())->verse(99));
     }
+
+    public function test_another_verse()
+    {
+        $expected = "3 bottles of beer on the wall, " .
+            "3 bottles of beer.\n" .
+            "Take one down and pass it around, " .
+            "2 bottles of beer on the wall.\n";
+
+        $this->assertEquals($expected, (new Bottles())->verse(3));
+    }
 }
