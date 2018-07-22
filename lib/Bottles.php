@@ -2,6 +2,11 @@
 
 class Bottles
 {
+    public function verses($_, $__)
+    {
+        return $this->verse(99) . "\n" . $this->verse(98);
+    }
+
     public function verse($number)
     {
         switch ($number) {
