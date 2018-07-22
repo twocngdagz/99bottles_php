@@ -2,9 +2,17 @@
 
 class Bottles
 {
-    public function verses($_, $__)
+    public function verses($starting, $ending)
     {
-        return $this->verse(99) . "\n" . $this->verse(98);
+        return implode(
+            "\n",
+            array_map(
+                function ($number) {
+                    return $this->verse($number);
+                },
+                range($starting, $ending)
+            )
+        );
     }
 
     public function verse($number)
