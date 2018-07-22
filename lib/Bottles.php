@@ -2,9 +2,13 @@
 
 class Bottles
 {
-    public function verses($_, $__)
+    public function verses($starting, $ending)
     {
-        return $this->verse(99) . "\n" . $this->verse(98);
+        if ($starting === 99) {
+            return $this->verse(99) . "\n" . $this->verse(98);
+        } else {
+            return $this->verse(2) . "\n" . $this->verse(1) . "\n" . $this->verse(0);
+        }
     }
 
     public function verse($number)
