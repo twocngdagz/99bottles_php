@@ -93,6 +93,16 @@ class BottlesTest extends \PHPUnit\Framework\TestCase
     {
         $bottles = new Bottles();
 
-        $this->assertEquals($bottles->verses(99, 0), $bottles->song());
+        $expected = implode(
+            "\n",
+            array_map(
+                function ($i) use ($bottles) {
+                    return $bottles->verse($i);
+                },
+                range(99, 0)
+            )
+        );
+
+        $this->assertEquals($expected, $bottles->song());
     }
 }
