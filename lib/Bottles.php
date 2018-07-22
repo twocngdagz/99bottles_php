@@ -2,6 +2,11 @@
 
 class Bottles
 {
+    public function song()
+    {
+        return $this->verses(99, 0);
+    }
+
     public function verses($starting, $ending)
     {
         return implode(
