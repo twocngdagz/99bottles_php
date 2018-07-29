@@ -22,7 +22,7 @@ class Bottles
 
     public function verse($bottles)
     {
-        return (string)(new Round($bottles));
+        return (string) new Round($bottles);
     }
 }
 
@@ -42,8 +42,8 @@ class Round
 
     private function challenge()
     {
-        return ucfirst($this->bottlesOfBeer()) . ' ' . $this->onWall() . ', ' .
-            $this->bottlesOfBeer() . ".\n";
+        return ucfirst($this->bottlesOfBeer()) . ' ' .
+            $this->onWall() . ', ' . $this->bottlesOfBeer() . ".\n";
     }
 
     private function response()
@@ -54,7 +54,8 @@ class Round
 
     private function bottlesOfBeer()
     {
-        return "{$this->anglicizedBottleCount()} {$this->pluralizedBottleForm()} of {$this->beer()}";
+        return "{$this->anglicizedBottleCount()} " .
+            "{$this->pluralizedBottleForm()} of {$this->beer()}";
     }
 
     private function beer()
@@ -74,7 +75,8 @@ class Round
 
     private function anglicizedBottleCount()
     {
-        return $this->allOut() ? 'no more' : (string)$this->bottles;
+        return $this->allOut() ?
+            'no more' : (string)$this->bottles;
     }
 
     private function goToTheStoreOrTakeOneDown()
