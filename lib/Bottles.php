@@ -44,7 +44,11 @@ class Bottles
 
     private function pronoun($number = 'FIXME')
     {
-        return 'one';
+        if ($number === 1) {
+            return 'it';
+        } else {
+            return 'one';
+        }
     }
     
     private function container($number)
