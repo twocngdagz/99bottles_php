@@ -30,7 +30,7 @@ class Bottles
                     "99 bottles of beer on the wall.\n";
             case 1:
                 return "{$number} {$this->container($number)} of beer on the wall, " .
-                    "1 bottle of beer.\n" .
+                    "{$number} bottle of beer.\n" .
                     "Take it down and pass it around, " .
                     "no more bottles of beer on the wall.\n";
             default:
