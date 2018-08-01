@@ -44,6 +44,7 @@ class Bottles
 
     private function pronoun()
     {
+        return 'one';
     }
     
     private function container($number)
