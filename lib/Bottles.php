@@ -36,7 +36,7 @@ class Bottles
             default:
                 return "{$number} {$this->container($number)} of beer on the wall, " .
                     "{$number} {$this->container($number)} of beer.\n" .
-                    "Take {$this->pronoun()} down and pass it around, " .
+                    "Take {$this->pronoun($number)} down and pass it around, " .
                     ($number - 1) . " " . $this->container($number - 1) .
                     " of beer on the wall.\n";
         }
