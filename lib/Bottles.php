@@ -42,7 +42,7 @@ class Bottles
         }
     }
 
-    private function pronoun($number = 'FIXME')
+    private function pronoun($number)
     {
         if ($number === 1) {
             return 'it';
