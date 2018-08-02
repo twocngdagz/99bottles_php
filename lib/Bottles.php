@@ -44,8 +44,7 @@ class Bottles
 
     private function quantity($number = 'FIXME')
     {
-        if ($number === 0)
-        {
+        if ($number === 0) {
             return 'no more';
         } else {
             return $number;
