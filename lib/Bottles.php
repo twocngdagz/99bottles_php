@@ -30,7 +30,7 @@ class Bottles
                     "Go to the store and buy some more, " .
                     "99 bottles of beer on the wall.\n";
             default:
-                return ucfirst($this->quantity($number)) .
+                return ucfirst((string)$this->quantity($number)) .
                     " {$this->container($number)} of beer on the wall, " .
                     "{$number} {$this->container($number)} of beer.\n" .
                     "Take {$this->pronoun($number)} down and pass it around, " .
