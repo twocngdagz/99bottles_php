@@ -43,7 +43,7 @@ class Bottles
         }
     }
 
-    private function quantity($number = 0)
+    private function quantity($number)
     {
         if ($number === 0) {
             return 'no more';
