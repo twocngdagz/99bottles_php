@@ -26,7 +26,7 @@ class Bottles
             case 0:
                 return ucfirst($this->quantity($number)) .
                     " {$this->container($number)} of beer on the wall, " .
-                    "{$this->quantity($number)} bottles of beer.\n" .
+                    "{$this->quantity($number)} {$this->container($number)} of beer.\n" .
                     "Go to the store and buy some more, " .
                     "99 bottles of beer on the wall.\n";
             default:
