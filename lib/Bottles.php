@@ -40,6 +40,10 @@ class Bottles
         }
     }
 
+    private function successor($number)
+    {
+    }
+    
     private function action($number)
     {
         if ($number === 0) {
