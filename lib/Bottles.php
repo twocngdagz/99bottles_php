@@ -22,39 +22,12 @@ class Bottles
 
     private function verse($number)
     {
-        switch ($number) {
-            case 0:
-                return ucfirst($this->quantity($number)) .
-                    " {$this->container($number)} of beer on the wall, " .
-                    "{$this->quantity($number)} {$this->container($number)} of beer.\n" .
-                    "{$this->action($number)}, " .
-                    "{$this->quantity($this->successor($number))} " .
-                    "{$this->container($this->successor($number))} of beer on the wall.\n";
-        }
         return ucfirst($this->quantity($number)) .
             " {$this->container($number)} of beer on the wall, " .
             "{$this->quantity($number)} {$this->container($number)} of beer.\n" .
             "{$this->action($number)}, " .
             "{$this->quantity($this->successor($number))} " .
             "{$this->container($this->successor($number))} of beer on the wall.\n";
-    }
-
-    private function successor($number)
-    {
-        if ($number === 0) {
-            return 99;
-        } else {
-            return $number - 1;
-        }
-    }
-    
-    private function action($number)
-    {
-        if ($number === 0) {
-            return 'Go to the store and buy some more';
-        } else {
-            return "Take {$this->pronoun($number)} down and pass it around";
-        }
     }
 
     private function quantity($number)
@@ -66,6 +39,24 @@ class Bottles
         }
     }
 
+    private function container($number)
+    {
+        if ($number === 1) {
+            return "bottle";
+        } else {
+            return "bottles";
+        }
+    }
+
+    private function action($number)
+    {
+        if ($number === 0) {
+            return 'Go to the store and buy some more';
+        } else {
+            return "Take {$this->pronoun($number)} down and pass it around";
+        }
+    }
+
     private function pronoun($number)
     {
         if ($number === 1) {
@@ -74,13 +65,13 @@ class Bottles
             return 'one';
         }
     }
-    
-    private function container($number)
+
+    private function successor($number)
     {
-        if ($number === 1) {
-            return "bottle";
+        if ($number === 0) {
+            return 99;
         } else {
-            return "bottles";
+            return $number - 1;
         }
     }
 }
