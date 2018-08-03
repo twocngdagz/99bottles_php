@@ -41,6 +41,7 @@ class Bottles
 
     private function action($number)
     {
+        return "Take {$this->pronoun($number)} down and pass it around";
     }
 
     private function quantity($number)
