@@ -30,14 +30,13 @@ class Bottles
                     "{$this->action($number)}, " .
                     "{$this->quantity($this->successor($number))} " .
                     "{$this->container($this->successor($number))} of beer on the wall.\n";
-            default:
-                return ucfirst($this->quantity($number)) .
-                    " {$this->container($number)} of beer on the wall, " .
-                    "{$this->quantity($number)} {$this->container($number)} of beer.\n" .
-                    "{$this->action($number)}, " .
-                    "{$this->quantity($this->successor($number))} " .
-                    "{$this->container($this->successor($number))} of beer on the wall.\n";
         }
+        return ucfirst($this->quantity($number)) .
+            " {$this->container($number)} of beer on the wall, " .
+            "{$this->quantity($number)} {$this->container($number)} of beer.\n" .
+            "{$this->action($number)}, " .
+            "{$this->quantity($this->successor($number))} " .
+            "{$this->container($this->successor($number))} of beer on the wall.\n";
     }
 
     private function successor($number)
