@@ -42,6 +42,7 @@ class Bottles
 
     private function successor($number)
     {
+        return $number - 1;
     }
     
     private function action($number)
