@@ -48,7 +48,7 @@ class Bottles
                 function ($verseNumber) {
                     return $this->verse($verseNumber);
                 },
-                range($finish, $start, -1)
+                range($finish, $start)
             )
         );
     }
