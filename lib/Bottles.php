@@ -15,7 +15,7 @@ class Bottles
                 function ($bottles) {
                     return $this->verse($bottles);
                 },
-                range($bottlesAtStart, $bottlesAtEnd, -1)
+                range($bottlesAtStart, $bottlesAtEnd)
             )
         );
     }
