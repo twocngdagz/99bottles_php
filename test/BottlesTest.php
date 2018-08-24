@@ -80,4 +80,10 @@ class BottlesTest extends \PHPUnit\Framework\TestCase {
 
     $this->assertEquals($expected, (new Bottles())->verses(2, 0));
   }
+
+  public function test_the_whole_song() {
+    $bottles = new Bottles();
+
+    $this->assertEquals($bottles->verses(99, 0), $bottles->song());
+  }
 }
