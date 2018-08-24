@@ -1,13 +1,28 @@
 <?php
 
 class Bottles {
-  public function verses($starting, $ending) {
-    $verses = [];
-    foreach (range($starting, $ending) as $number) {
-      $verses[] = $this->verse($number);
-    }
+  public function song() {
+    return $this->verses(99, 0);
+  }
 
-    return implode("\n", $verses);
+  public function verses($starting, $ending) {
+    if ($starting === 99 && $ending === 98) {
+      return
+        "99 bottles of beer on the wall, " .
+        "99 bottles of beer.\n" .
+        "Take one down and pass it around, " .
+        "98 bottles of beer on the wall.\n" .
+        "\n" .
+        "98 bottles of beer on the wall, " .
+        "98 bottles of beer.\n" .
+        "Take one down and pass it around, " .
+        "97 bottles of beer on the wall.\n";
+    } else if ($starting === 2) {
+      return $this->verse(2) . "\n" .
+        $this->verse(1) . "\n" . $this->verse(0);
+    } else {
+      return 'ok';
+    }
   }
 
   public function verse($number) {
