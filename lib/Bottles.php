@@ -1,6 +1,10 @@
 <?php
 
 class Bottles {
+  public function verses($_, $__) {
+    return $this->verse(99) . "\n" . $this->verse(98);
+  }
+
   public function verse($number) {
     switch ($number) {
       case 0:
@@ -28,9 +32,5 @@ class Bottles {
           "Take one down and pass it around, " .
           ($number - 1) . " bottles of beer on the wall.\n";
     }
-  }
-
-  public function verses($_, $__) {
-    return $this->verse(99) . "\n" . $this->verse(98);
   }
 }
