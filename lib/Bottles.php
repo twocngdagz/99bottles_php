@@ -2,12 +2,12 @@
 
 class Bottles {
   public function verses($starting, $ending) {
-    if ($starting === 99) {
-      return $this->verse(99) . "\n" . $this->verse(98);
-    } else {
-      return $this->verse(2) . "\n" . $this->verse(1) .
-        "\n" . $this->verse(0);
+    $verses = [];
+    foreach (range($starting, $ending) as $number) {
+      $verses[] = $this->verse($number);
     }
+
+    return implode("\n", $verses);
   }
 
   public function verse($number) {
