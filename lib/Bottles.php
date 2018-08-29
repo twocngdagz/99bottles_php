@@ -44,6 +44,10 @@ class Bottles {
   }
 
   private function container($number = 'FIXME') {
-    return "bottles";
+    if ($number === 1) {
+      return "bottle";
+    } else {
+      return "bottles";
+    }
   }
 }
