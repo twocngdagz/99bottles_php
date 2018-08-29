@@ -43,7 +43,7 @@ class Bottles {
     }
   }
 
-  private function container() {
+  private function container($number = 'FIXME') {
     return "bottles";
   }
 }
