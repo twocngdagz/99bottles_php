@@ -39,6 +39,7 @@ class Bottles {
   }
 
   private function quantity() {
+    return 'no more';
   }
 
   private function pronoun($number) {
