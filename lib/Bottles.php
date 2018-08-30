@@ -39,8 +39,9 @@ class Bottles {
   }
 
   public function pronoun() {
+    return 'one';
   }
-  
+
   public function container($number) {
     if ($number === 1) {
       return "bottle";
