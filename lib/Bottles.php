@@ -38,6 +38,9 @@ class Bottles {
     }
   }
 
+  public function quantity() {
+  }
+
   public function pronoun($number) {
     if ($number === 1) {
       return 'it';
