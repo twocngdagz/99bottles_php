@@ -39,7 +39,11 @@ class Bottles {
   }
 
   private function quantity($number = 'FIXME') {
-    return 'no more';
+    if ($number === 0) {
+      return 'no more';
+    } else {
+      return $number;
+    }
   }
 
   private function pronoun($number) {
