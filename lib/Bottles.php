@@ -38,7 +38,7 @@ class Bottles {
     }
   }
 
-  public function pronoun() {
+  public function pronoun($number = 'FIXME') {
     return 'one';
   }
 
