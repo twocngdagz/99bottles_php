@@ -25,7 +25,7 @@ class Bottles {
           "99 bottles of beer on the wall.\n";
       default:
         return
-          ucfirst((string)$this->quantity($number)) .
+          ucfirst($this->quantity($number)) .
           " {$this->container($number)} of beer on the wall, " .
           "{$number} {$this->container($number)} of beer.\n" .
           "Take {$this->pronoun($number)} down and pass it around, " .
@@ -39,7 +39,7 @@ class Bottles {
     if ($number === 0) {
       return 'no more';
     } else {
-      return $number;
+      return (string)$number;
     }
   }
 
