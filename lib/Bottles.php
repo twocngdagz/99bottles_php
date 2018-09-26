@@ -37,6 +37,10 @@ class Bottles {
     }
   }
 
+  public function successor($number) {
+    return $number - 1;
+  }
+
   public function action($number) {
     if ($number === 0) {
       return 'Go to the store and buy some more';
