@@ -35,6 +35,9 @@ class Bottles {
     }
   }
 
+  public function action($number) {
+  }
+
   public function quantity($number) {
     if ($number === 0) {
       return 'no more';
