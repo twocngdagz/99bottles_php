@@ -38,7 +38,11 @@ class Bottles {
   }
 
   public function successor($number) {
-    return $number - 1;
+    if ($number === 0) {
+      return 99;
+    } else {
+      return $number - 1;
+    }
   }
 
   public function action($number) {
