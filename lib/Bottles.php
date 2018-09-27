@@ -25,19 +25,19 @@ class Bottles {
       "of beer on the wall.\n";
   }
 
-  public function quantity($number) {
-    if ($number === 0) {
-      return 'no more';
-    } else {
-      return (string)$number;
-    }
-  }
-
   public function container($number) {
     if ($number === 1) {
       return "bottle";
     } else {
       return "bottles";
+    }
+  }
+
+  public function quantity($number) {
+    if ($number === 0) {
+      return 'no more';
+    } else {
+      return (string)$number;
     }
   }
 
@@ -64,4 +64,8 @@ class Bottles {
       return $number - 1;
     }
   }
+}
+
+class BottleNumber {
+
 }
