@@ -30,35 +30,19 @@ class Bottles {
   }
 
   public function quantity($number) {
-    if ($number === 0) {
-      return 'no more';
-    } else {
-      return (string)$number;
-    }
+    return (new BottleNumber($number))->quantity($number);
   }
 
   public function action($number) {
-    if ($number === 0) {
-      return 'Go to the store and buy some more';
-    } else {
-      return "Take {$this->pronoun($number)} down and pass it around";
-    }
+    return (new BottleNumber($number))->action($number);
   }
 
   public function pronoun($number) {
-    if ($number === 1) {
-      return 'it';
-    } else {
-      return 'one';
-    }
+    return (new BottleNumber($number))->pronoun($number);
   }
 
   public function successor($number) {
-    if ($number === 0) {
-      return 99;
-    } else {
-      return $number - 1;
-    }
+    return (new BottleNumber($number))->successor($number);
   }
 }
 
