@@ -67,6 +67,12 @@ class Bottles {
 }
 
 class BottleNumber {
+  protected $number;
+
+  public function __construct($number) {
+    $this->number = $number;
+  }
+
   public function container($number) {
     if ($number === 1) {
       return "bottle";
