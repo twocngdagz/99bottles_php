@@ -34,7 +34,7 @@ class Bottles {
   }
 
   public function action($number) {
-    return (new BottleNumber($number))->action($number);
+    return (new BottleNumber($number))->action();
   }
 
   public function pronoun($number) {
@@ -69,11 +69,11 @@ class BottleNumber {
     }
   }
 
-  public function action($number) {
-    if ($number === 0) {
+  public function action() {
+    if ($this->number === 0) {
       return 'Go to the store and buy some more';
     } else {
-      return "Take {$this->pronoun($number)} down and pass it around";
+      return "Take {$this->pronoun($this->number)} down and pass it around";
     }
   }
 
