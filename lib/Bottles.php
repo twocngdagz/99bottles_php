@@ -28,26 +28,6 @@ class Bottles {
       "{$nextBottleNumber->container()} " .
       "of beer on the wall.\n";
   }
-
-  public function container($number) {
-    return (new BottleNumber($number))->container();
-  }
-
-  public function quantity($number) {
-    return (new BottleNumber($number))->quantity();
-  }
-
-  public function action($number) {
-    return (new BottleNumber($number))->action();
-  }
-
-  public function pronoun($number) {
-    return (new BottleNumber($number))->pronoun();
-  }
-
-  public function successor($number) {
-    return (new BottleNumber($number))->successor();
-  }
 }
 
 class BottleNumber {
