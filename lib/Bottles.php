@@ -42,7 +42,7 @@ class Bottles {
   }
 
   public function successor($number) {
-    return (new BottleNumber($number))->successor($number);
+    return (new BottleNumber($number))->successor();
   }
 }
 
@@ -85,11 +85,11 @@ class BottleNumber {
     }
   }
 
-  public function successor($number) {
-    if ($number === 0) {
+  public function successor() {
+    if ($this->number === 0) {
       return 99;
     } else {
-      return $number - 1;
+      return $this->number - 1;
     }
   }
 }
