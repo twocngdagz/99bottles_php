@@ -22,8 +22,8 @@ class Bottles {
       "{$bottleNumber->quantity()} " .
       "{$bottleNumber->container()} of beer.\n" .
       "{$bottleNumber->action()}, " .
-      "{$this->quantity($this->successor($number))} " .
-      "{$this->container($this->successor($number))} " .
+      "{$this->quantity($bottleNumber->successor())} " .
+      "{$this->container($bottleNumber->successor())} " .
       "of beer on the wall.\n";
   }
 
