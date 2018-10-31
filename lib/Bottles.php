@@ -15,16 +15,17 @@ class Bottles {
   }
 
   public function verse($number) {
-    $bottleNumber = new BottleNumber($number);
+    $bottleNumber     = new BottleNumber($number);
     $nextBottleNumber = new BottleNumber($bottleNumber->successor());
+
     return
       ucfirst($bottleNumber->quantity()) .
       " {$bottleNumber->container()} of beer on the wall, " .
       "{$bottleNumber->quantity()} " .
       "{$bottleNumber->container()} of beer.\n" .
       "{$bottleNumber->action()}, " .
-      "{$this->quantity($bottleNumber->successor())} " .
-      "{$this->container($bottleNumber->successor())} " .
+      "{$nextBottleNumber->quantity()} " .
+      "{$nextBottleNumber->container()} " .
       "of beer on the wall.\n";
   }
 
