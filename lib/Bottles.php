@@ -19,13 +19,11 @@ class Bottles {
     $nextBottleNumber = new BottleNumber($bottleNumber->successor());
 
     return
-      ucfirst($bottleNumber->quantity()) .
-      " {$bottleNumber->container()} of beer on the wall, " .
-      "{$bottleNumber->quantity()} " .
-      "{$bottleNumber->container()} of beer.\n" .
+      ucfirst("$bottleNumber ") .
+      "of beer on the wall, " .
+      "{$bottleNumber} of beer.\n" .
       "{$bottleNumber->action()}, " .
-      "{$nextBottleNumber->quantity()} " .
-      "{$nextBottleNumber->container()} " .
+      "{$nextBottleNumber} " .
       "of beer on the wall.\n";
   }
 }
@@ -35,6 +33,10 @@ class BottleNumber {
 
   public function __construct($number) {
     $this->number = $number;
+  }
+
+  public function __toString() {
+    return $this->quantity() . ' ' . $this->container();
   }
 
   public function container() {
